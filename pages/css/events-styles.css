@@ -1,0 +1,870 @@
+/* events-styles.css - Estilos tipo Instagram Feed para cards de publicaciones */
+
+/* ===== MANTENER ESTILOS GENERALES CONSISTENTES CON INDEX.HTML ===== */
+.bg-featured-blog {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 450px;
+    min-height: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* ===== ESTILOS INSTAGRAM FEED PARA CARDS DE POSTS ===== */
+
+/* Post Card Principal - Estilo Instagram */
+.post-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: none !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    position: relative;
+}
+
+.post-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(64, 93, 230, 0.05), rgba(220, 38, 127, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.post-card:hover::before {
+    opacity: 1;
+}
+
+/* Contenedor de imagen estilo Instagram - MEJORADO */
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.6s ease;
+    filter: brightness(0.95) contrast(1.1) saturate(1.1);
+    display: block;
+    border: none;
+    outline: none;
+}
+
+/* Fallback para imágenes que no cargan */
+.card-img-top:not([src]),
+.card-img-top[src=""],
+.card-img-top[src*="placeholder"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.card-img-top:not([src])::before,
+.card-img-top[src=""]::before,
+.card-img-top[src*="placeholder"]::before {
+    content: "📷";
+    font-size: 3rem;
+}
+
+.post-card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.2) saturate(1.2);
+}
+
+/* Overlay tipo Instagram */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(64, 93, 230, 0.85), rgba(220, 38, 127, 0.85));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.card-overlay i {
+    font-size: 3.5rem;
+    color: white;
+    transform: scale(0.3) rotate(-10deg);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.post-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.post-card:hover .card-overlay i {
+    transform: scale(1) rotate(0deg);
+}
+
+/* Cuerpo de la card estilo Instagram */
+.post-card .card-body {
+    padding: 1.5rem !important;
+    position: relative;
+    z-index: 3;
+    background: white;
+}
+
+/* Badge de categoría estilo Instagram */
+.post-card .badge {
+    background: linear-gradient(45deg, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80) !important;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Título estilo Instagram */
+.post-card .card-title {
+    font-weight: 700 !important;
+    color: #262626;
+    line-height: 1.3;
+    margin-bottom: 0.8rem !important;
+    font-size: 1.1rem;
+}
+
+/* Texto de descripción */
+.post-card .card-text {
+    color: #8e8e8e !important;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Footer de la card */
+.post-card .card-footer {
+    background: transparent !important;
+    border: none !important;
+    padding: 1rem 1.5rem 1.5rem !important;
+}
+
+.post-card .card-footer .small {
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+.post-card .card-footer .text-primary {
+    color: #405de6 !important;
+    font-weight: 600;
+}
+
+/* ===== CARRUSEL MÓVIL ESTILO INSTAGRAM STORIES ===== */
+.mobile-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.mobile-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 1rem;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.mobile-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile Card estilo Instagram Story - MEJORADO */
+.mobile-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.mobile-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    border-color: #405de6;
+}
+
+.mobile-card-img {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+    filter: brightness(0.95) contrast(1.05);
+    display: block;
+    border: none;
+    outline: none;
+}
+
+/* Fallback para imágenes móviles */
+.mobile-card-img img:not([src]),
+.mobile-card-img img[src=""],
+.mobile-card-img img[src*="placeholder"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.mobile-card-img img:not([src])::before,
+.mobile-card-img img[src=""]::before {
+    content: "📷";
+    font-size: 2.5rem;
+}
+
+.mobile-card:hover .mobile-card-img img {
+    transform: scale(1.08);
+    filter: brightness(1) contrast(1.1);
+}
+
+.mobile-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(64, 93, 230, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-card-overlay i {
+    font-size: 3rem;
+    color: white;
+    transform: scale(0.5);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.mobile-card:hover .mobile-card-overlay {
+    opacity: 1;
+}
+
+.mobile-card:hover .mobile-card-overlay i {
+    transform: scale(1);
+}
+
+.mobile-card-content {
+    padding: 1.2rem;
+}
+
+.mobile-card-title {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+    color: #262626;
+    font-size: 1rem;
+}
+
+.mobile-card-text {
+    font-size: 0.85rem;
+    color: #8e8e8e;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.mobile-card-date {
+    font-size: 0.75rem;
+    color: #405de6;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== CONTROLES DE CARRUSEL SIMPLES ===== */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    z-index: 10;
+    background: none;
+    border: none;
+}
+
+.carousel-control-prev {
+    left: -60px;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none;
+    background-image: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+/* Flechas simples sin efectos */
+.carousel-control-prev-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #6c757d;
+    border-bottom: 2px solid #6c757d;
+}
+
+.carousel-control-next-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #6c757d;
+    border-bottom: 2px solid #6c757d;
+}
+
+/* Feedback visual mínimo solo al hacer clic */
+.carousel-control-prev:active .carousel-control-prev-icon::before,
+.carousel-control-next:active .carousel-control-next-icon::before {
+    border-color: #495057;
+}
+
+/* Sin contenedor extra - botones fuera del container */
+#historyCarousel {
+    position: relative;
+}
+
+/* ===== MODAL ESTILO INSTAGRAM - MEJORADO ===== */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #405de6, #833ab4);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+    filter: brightness(1) contrast(1.05);
+    display: block;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #262626;
+}
+
+/* ===== IMAGEN DE FONDO PRINCIPAL - MEJORADA PARA PC ===== */
+.bg-featured-blog {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 450px;
+    min-height: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    background-attachment: scroll;
+}
+
+/* ===== ESTADOS DE CARGA ===== */
+.latest-post-loading,
+.history-loading {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #8e8e8e;
+}
+
+.latest-post-loading .spinner-border,
+.history-loading .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3em;
+    border-color: #405de6;
+    border-right-color: transparent;
+}
+
+/* ===== TOAST NOTIFICATIONS ESTILO INSTAGRAM ===== */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #405de6, #833ab4);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(64, 93, 230, 0.4);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.toast-notification.show {
+    transform: translateX(0);
+}
+
+/* ===== SCROLL INDICATOR PARA MÓVIL ===== */
+.mobile-scroll-container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Pantallas extra grandes - Monitores 4K */
+@media (min-width: 1400px) {
+    .bg-featured-blog {
+        height: 550px;
+        min-height: 500px;
+    }
+    
+    /* Más espacio para botones en pantallas grandes */
+    .carousel-control-prev {
+        left: -80px;
+    }
+    
+    .carousel-control-next {
+        right: -80px;
+    }
+}
+
+/* Pantallas grandes - PC */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .bg-featured-blog {
+        height: 500px;
+        min-height: 450px;
+    }
+}
+
+/* Pantallas medianas - Tablet */
+@media (max-width: 991px) and (min-width: 769px) {
+    .bg-featured-blog {
+        height: 400px;
+        min-height: 350px;
+    }
+    
+    /* Ajustar controles de carrusel para tablet */
+    .carousel-control-prev {
+        left: -50px;
+    }
+    
+    .carousel-control-next {
+        right: -50px;
+    }
+}
+
+/* Pantallas pequeñas - Móvil */
+@media (max-width: 768px) {
+    .bg-featured-blog {
+        height: 320px;
+        min-height: 280px;
+    }
+    
+    .post-card {
+        border-radius: 16px !important;
+    }
+    
+    .card-img-container {
+        height: 180px;
+    }
+    
+    .mobile-card {
+        flex: 0 0 280px;
+    }
+    
+    .mobile-card-img {
+        height: 140px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none !important;
+    }
+    
+    /* En móvil mostrar indicador de scroll */
+    .mobile-scroll-container::before {
+        content: '← Desliza para ver más →';
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8rem;
+        color: #8e8e8e;
+        font-weight: 500;
+        white-space: nowrap;
+        z-index: 5;
+    }
+    
+    .modal-image-container {
+        max-height: 300px;
+    }
+    
+    .modal-image-container img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-card {
+        flex: 0 0 260px;
+    }
+    
+    .mobile-card-img {
+        height: 120px;
+    }
+    
+    .mobile-scroll-wrapper {
+        padding: 0 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    .card-img-container {
+        height: 160px;
+    }
+    
+    .modal-image-container {
+        max-height: 250px;
+    }
+    
+    .modal-image-container img {
+        max-height: 250px;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.mobile-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== MODO OSCURO BÁSICO ===== */
+@media (prefers-color-scheme: dark) {
+    .post-card,
+    .mobile-card {
+        background: #1a1a1a;
+        color: #f5f5f5;
+    }
+    
+    .post-card .card-title {
+        color: #f5f5f5;
+    }
+    
+    .post-card .card-text {
+        color: #b3b3b3;
+    }
+    
+    .mobile-card-title {
+        color: #f5f5f5;
+    }
+    
+    .mobile-card-text {
+        color: #b3b3b3;
+    }
+}
+
+/* ===== EFECTO PARALLAX SUTIL ===== */
+.post-card:hover .card-img-top {
+    transform: scale(1.05) translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ===== HEART ANIMATION PARA LIKES (FUTURO) ===== */
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.heart-animation {
+    animation: heartBeat 0.6s ease;
+}
+
+/* ===== MANEJO DE ERRORES DE IMÁGENES ===== */
+.card-img-top[src=""],
+.card-img-top[src*="placeholder"],
+.mobile-card-img img[src=""],
+.mobile-card-img img[src*="placeholder"] {
+    position: relative;
+}
+
+.card-img-top[src=""]:after,
+.card-img-top[src*="placeholder"]:after {
+    content: "📷 Imagen no disponible";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ===== EVENTOS DINÁMICOS - ESTILOS ADICIONALES ===== */
+
+/* Loading states para eventos */
+#events-loading {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8e8e8e;
+}
+
+#events-loading .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3em;
+    border-color: #405de6;
+    border-right-color: transparent;
+    animation: spinner-border 0.75s linear infinite;
+}
+
+/* Contenido dinámico de eventos */
+#events-dynamic-content .alert {
+    border-left: 4px solid #198754;
+    background: linear-gradient(90deg, rgba(25, 135, 84, 0.05), rgba(25, 135, 84, 0.02));
+}
+
+/* Interacciones mejoradas para eventos */
+.mb-4 a[onclick^="showEventDetails"] {
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.mb-4 a[onclick^="showEventDetails"]:hover {
+    color: #0d6efd !important;
+    text-decoration: underline !important;
+    transform: translateX(4px);
+}
+
+/* Badge de "Actualizado" con animación */
+.badge.bg-success.rounded-pill {
+    animation: pulse 2s infinite;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Mejoras para el badge de estado de evento */
+.badge.bg-success.ms-auto {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+    background: linear-gradient(45deg, #198754, #20c997) !important;
+}
+
+/* Modal de evento personalizado */
+.modal-header.bg-success,
+.modal-header.bg-info,
+.modal-header.bg-warning,
+.modal-header.bg-primary,
+.modal-header.bg-secondary {
+    color: white !important;
+}
+
+.modal-header.bg-success { background: linear-gradient(45deg, #198754, #20c997) !important; }
+.modal-header.bg-info { background: linear-gradient(45deg, #0dcaf0, #6f42c1) !important; }
+.modal-header.bg-warning { background: linear-gradient(45deg, #ffc107, #fd7e14) !important; }
+.modal-header.bg-primary { background: linear-gradient(45deg, #0d6efd, #6610f2) !important; }
+.modal-header.bg-secondary { background: linear-gradient(45deg, #6c757d, #495057) !important; }
+
+/* Etiquetas de información en modal */
+.modal-body label.fw-bold.text-muted.small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #6c757d !important;
+}
+
+/* Área de descripción en modal */
+.modal-body .bg-light.rounded {
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef;
+    line-height: 1.6;
+    color: #495057;
+}
+
+/* Horarios regulares en contenido estático */
+.border-start.border-primary.border-4 {
+    border-color: #405de6 !important;
+    background: linear-gradient(90deg, rgba(64, 93, 230, 0.05), rgba(64, 93, 230, 0.02)) !important;
+}
+
+.text-primary {
+    color: #405de6 !important;
+}
+
+/* Responsive para eventos */
+@media (max-width: 768px) {
+    #events-loading {
+        min-height: 150px;
+    }
+    
+    #events-loading .spinner-border {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .d-flex.align-items-center.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+    
+    .badge.bg-success.rounded-pill {
+        margin-top: 0;
+        align-self: flex-end;
+    }
+    
+    /* Modal responsivo para eventos */
+    .modal-dialog {
+        margin: 1rem;
+    }
+    
+    .modal-body .row {
+        margin: 0;
+    }
+    
+    .modal-body .col-md-6 {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+} 

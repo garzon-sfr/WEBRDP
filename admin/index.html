@@ -1,759 +1,906 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!--evitar cache-->
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
-    <title>SB Admin 2 - Dashboard</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <title>Panel de Administración - WEBRDP</title>
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
-
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-3">Administrador RDP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <!-- Posts -->
+          <li class="nav-item">
+            <a class="nav-link" href="#posts"><i class="bi bi-newspaper me-2"></i>Posts</a>
+          </li>
+          <!-- Eventos -->
+          <li class="nav-item">
+            <a class="nav-link" href="#eventos"><i class="bi bi-calendar-event me-2"></i>Eventos</a>
+          </li>
+          <!-- Donaciones -->
+          <li class="nav-item">
+            <a class="nav-link" href="#donations"><i class="bi bi-heart-fill me-2"></i>Donaciones</a>
+          </li>
         </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
+        
+        <ul class="navbar-nav ms-auto align-items-center">
+          <!-- Mensajes -->
+          <li class="nav-item me-3 position-relative">
+            <a class="nav-link" href="#mensajes">
+              <i class="bi bi-envelope-fill fs-5"></i>
+              <span id="messageBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">!</span>
+            </a>
+          </li>
+  
+          <!-- Usuario -->
+          <li class="nav-item me-3">
+            <span class="nav-link disabled d-flex align-items-center">
+              <i class="bi bi-person-circle me-2 fs-5"></i>
+              <span id="userEmail" class="small text-white">Cargando...</span>
+            </span>
+          </li>
+  
+          <!-- Cerrar sesión -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logoutButton">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- End of Page Wrapper -->
+  </nav>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+ <main class="container-fluid mt-4">
+ <!-- Posts Section -->
+ <section id="posts" class="mb-5">
+   <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2><i class="bi bi-newspaper me-2"></i>Gestionar Posts</h2>
+     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quickPostModal">
+       <i class="bi bi-plus-circle me-2"></i>Nuevo Post
+     </button>
+   </div>
+   
+   <!-- Posts Table -->
+   <div class="card">
+     <div class="card-header">
+       <h5 class="mb-0">Posts Publicados</h5>
+     </div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <table class="table table-hover" id="postsTable">
+           <thead class="table-dark">
+             <tr>
+               <th>Imagen</th>
+               <th>Título</th>
+               <th>Descripción</th>
+               <th>Fecha</th>
+               <th>Estado</th>
+               <th>Acciones</th>
+             </tr>
+           </thead>
+           <tbody id="postsTableBody">
+             <!-- Los posts se cargarán aquí dinámicamente -->
+             <tr>
+               <td colspan="6" class="text-center text-muted py-4">
+                 <i class="bi bi-file-text fs-1 d-block mb-2"></i>
+                 No hay posts disponibles
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </section>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+ <!-- Events Section -->
+ <section id="eventos" class="mb-5">
+   <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2><i class="bi bi-calendar-event me-2"></i>Gestionar Eventos</h2>
+     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal">
+       <i class="bi bi-plus-circle me-2"></i>Nuevo Evento
+     </button>
+   </div>
+   
+   <!-- Events Table -->
+   <div class="card">
+     <div class="card-header">
+       <h5 class="mb-0">Eventos Programados</h5>
+     </div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <table class="table table-hover" id="eventsTable">
+           <thead class="table-dark">
+             <tr>
+               <th>Fecha</th>
+               <th>Título</th>
+               <th>Tipo</th>
+               <th>Descripción</th>
+               <th>Estado</th>
+               <th>Acciones</th>
+             </tr>
+           </thead>
+           <tbody id="eventsTableBody">
+             <!-- Los eventos se cargarán aquí dinámicamente -->
+             <tr>
+               <td colspan="6" class="text-center text-muted py-4">
+                 <i class="bi bi-calendar fs-1 d-block mb-2"></i>
+                 No hay eventos disponibles
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </section>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- Messages Section -->
+ <section id="mensajes" class="mb-5">
+   <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2><i class="bi bi-envelope-fill me-2"></i>Mensajes de Contacto</h2>
+     <div class="btn-group">
+       <button class="btn btn-outline-secondary" id="refreshMessages">
+         <i class="bi bi-arrow-clockwise me-2"></i>Actualizar
+       </button>
+       <button class="btn btn-outline-success" id="markAllRead">
+         <i class="bi bi-check-all me-2"></i>Marcar todo como leído
+       </button>
+     </div>
+   </div>
+   
+   <!-- Messages Summary Cards -->
+   <div class="row mb-4">
+     <div class="col-md-3">
+       <div class="card text-center bg-primary text-white">
+         <div class="card-body">
+           <h4 id="totalMessages">0</h4>
+           <small>Total Mensajes</small>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-3">
+       <div class="card text-center bg-warning text-white">
+         <div class="card-body">
+           <h4 id="pendingMessages">0</h4>
+           <small>Sin Leer</small>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-3">
+       <div class="card text-center bg-info text-white">
+         <div class="card-body">
+           <h4 id="newContactsToday">0</h4>
+           <small>Nuevos Contactos Hoy</small>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-3">
+       <div class="card text-center bg-success text-white">
+         <div class="card-body">
+           <h4 id="prayerRequests">0</h4>
+           <small>Peticiones de Oración</small>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   <!-- Messages Filter -->
+   <div class="card mb-4">
+     <div class="card-body">
+       <div class="row align-items-center">
+         <div class="col-md-3">
+           <select class="form-select" id="categoryFilter">
+             <option value="">Todas las categorías</option>
+             <option value="new">Nuevos miembros</option>
+             <option value="request">Peticiones y oración</option>
+             <option value="suggestion">Sugerencias</option>
+           </select>
+         </div>
+         <div class="col-md-3">
+           <select class="form-select" id="statusFilter">
+             <option value="">Todos los estados</option>
+             <option value="nuevo">Nuevo</option>
+             <option value="leido">Leído</option>
+             <option value="respondido">Respondido</option>
+           </select>
+         </div>
+         <div class="col-md-4">
+           <input type="text" class="form-control" id="searchMessages" placeholder="Buscar por nombre o email...">
+         </div>
+         <div class="col-md-2">
+           <button class="btn btn-outline-primary w-100" id="applyFilters">
+             <i class="bi bi-funnel me-2"></i>Filtrar
+           </button>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   <!-- Messages Table -->
+   <div class="card">
+     <div class="card-header">
+       <h5 class="mb-0">Mensajes Recibidos</h5>
+     </div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <table class="table table-hover" id="messagesTable">
+           <thead class="table-dark">
+             <tr>
+               <th>Estado</th>
+               <th>Categoría</th>
+               <th>Nombre</th>
+               <th>Email</th>
+               <th>Teléfono</th>
+               <th>Fecha</th>
+               <th>Acciones</th>
+             </tr>
+           </thead>
+           <tbody id="messagesTableBody">
+             <!-- Los mensajes se cargarán aquí dinámicamente -->
+             <tr>
+               <td colspan="7" class="text-center text-muted py-4">
+                 <i class="bi bi-envelope fs-1 d-block mb-2"></i>
+                 No hay mensajes disponibles
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </section>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+ <!-- Donations Section -->
+ <section id="donations" class="mb-5">
+   <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2><i class="bi bi-heart-fill me-2"></i>Donaciones Recibidas</h2>
+     <div class="btn-group">
+       <button class="btn btn-outline-secondary" id="refreshDonations">
+         <i class="bi bi-arrow-clockwise me-2"></i>Actualizar
+       </button>
+       <button class="btn btn-outline-primary" id="exportDonations">
+         <i class="bi bi-file-earmark-pdf me-2"></i>Exportar PDF
+       </button>
+     </div>
+   </div>
+   
+   <!-- Donations Table -->
+   <div class="card">
+     <div class="card-header">
+       <h5 class="mb-0">Historial de Donaciones</h5>
+     </div>
+     <div class="card-body">
+       <!-- Estadísticas por Estado -->
+       <div class="row mb-3">
+         <div class="col-md-3">
+           <div class="card text-center bg-success text-white">
+             <div class="card-body">
+               <h4 id="confirmedAmount">$0</h4>
+               <small>Confirmadas</small>
+               <div class="mt-2">
+                 <span id="confirmedCount" class="badge bg-light text-success">0</span>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-3">
+           <div class="card text-center bg-warning text-white">
+             <div class="card-body">
+               <h4 id="pendingAmount">$0</h4>
+               <small>Pendientes</small>
+               <div class="mt-2">
+                 <span id="pendingCount" class="badge bg-light text-warning">0</span>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-3">
+           <div class="card text-center bg-danger text-white">
+             <div class="card-body">
+               <h4 id="rejectedAmount">$0</h4>
+               <small>Rechazadas</small>
+               <div class="mt-2">
+                 <span id="rejectedCount" class="badge bg-light text-danger">0</span>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-3">
+           <div class="card text-center bg-info text-white">
+             <div class="card-body">
+               <h4 id="monthlyConfirmed">$0</h4>
+               <small>Este Mes (Confirmadas)</small>
+               <div class="mt-2">
+                 <span id="avgConfirmedDonation" class="badge bg-light text-info">$0 promedio</span>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="table-responsive">
+         <table class="table table-hover" id="donationsTable">
+           <thead class="table-dark">
+             <tr>
+               <th>Fecha</th>
+               <th>Donante</th>
+               <th>Email</th>
+               <th>Monto</th>
+               <th>Método</th>
+               <th>Estado</th>
+               <th>Acciones</th>
+             </tr>
+           </thead>
+           <tbody id="donationsTableBody">
+             <!-- Las donaciones se cargarán aquí dinámicamente -->
+             <tr>
+               <td colspan="7" class="text-center text-muted py-4">
+                 <i class="bi bi-heart fs-1 d-block mb-2"></i>
+                 No hay donaciones registradas
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </section>
+ </main>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+ <!-- Modal para Editar Post -->
+ <div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-primary text-white">
+         <h5 class="modal-title" id="editPostModalLabel">
+           <i class="bi bi-pencil-square me-2"></i>Editar Post
+         </h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form id="editPostForm">
+           <input type="hidden" id="editPostId">
+           <div class="row">
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="editPostTitle" class="form-label">
+                   <i class="bi bi-type me-2"></i>Título del Post
+                 </label>
+                 <input type="text" class="form-control" id="editPostTitle" placeholder="Ingresa el título..." required>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="editPostCategory" class="form-label">
+                   <i class="bi bi-tag me-2"></i>Categoría
+                 </label>
+                 <select class="form-select" id="editPostCategory" required>
+                   <option value="">Seleccionar categoría...</option>
+                   <option value="noticias">Noticias</option>
+                   <option value="eventos">Eventos</option>
+                   <option value="testimonios">Testimonios</option>
+                   <option value="predicaciones">Predicaciones</option>
+                   <option value="jovenes">Jóvenes</option>
+                 </select>
+               </div>
+             </div>
+             
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="editPostDescription" class="form-label">
+                   <i class="bi bi-text-paragraph me-2"></i>Descripción
+                 </label>
+                 <textarea class="form-control" id="editPostDescription" rows="5" placeholder="Escribe la descripción del post..." required></textarea>
+               </div>
+               
+               <div class="mb-3">
+                 <label class="form-label d-block">
+                   <i class="bi bi-calendar me-2"></i>Programación
+                 </label>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="editPublishType" id="editPublishNow" value="now">
+                   <label class="form-check-label" for="editPublishNow">
+                     Publicar ahora
+                   </label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="editPublishType" id="editPublishLater" value="later">
+                   <label class="form-check-label" for="editPublishLater">
+                     Programar
+                   </label>
+                 </div>
+               </div>
+               
+               <div class="mb-3 d-none" id="editScheduleContainer">
+                 <label for="editScheduleDate" class="form-label">Fecha de publicación</label>
+                 <div class="mb-2">
+                   <small class="text-info">
+                     <i class="bi bi-clock-fill me-1"></i>
+                     Hora actual: <span id="editCurrentTime" class="fw-bold">--:--</span>
+                   </small>
+                 </div>
+                 <input type="datetime-local" class="form-control" id="editScheduleDate">
+               </div>
+             </div>
+           </div>
+           
+           <!-- Imagen actual -->
+           <div class="mt-3" id="currentImageContainer">
+             <label class="form-label">Imagen actual:</label>
+             <div class="text-center">
+               <img id="currentImage" src="" alt="Imagen actual" class="img-thumbnail" style="max-height: 200px;">
+               <p class="text-muted small mt-2">Para cambiar la imagen, primero debes eliminar el post y crear uno nuevo.</p>
+             </div>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <i class="bi bi-x-circle me-2"></i>Cancelar
+         </button>
+         <button type="submit" form="editPostForm" class="btn btn-primary">
+           <i class="bi bi-save me-2"></i>Guardar Cambios
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+ <!-- Modal para Agregar/Editar Evento -->
+ <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-success text-white">
+         <h5 class="modal-title" id="eventModalLabel">
+           <i class="bi bi-calendar-plus me-2"></i>Agregar Nuevo Evento
+         </h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form id="eventForm">
+           <input type="hidden" id="eventId">
+           <div class="row">
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="eventTitle" class="form-label">
+                   <i class="bi bi-type me-2"></i>Título del Evento
+                 </label>
+                 <input type="text" class="form-control" id="eventTitle" placeholder="Ej: Noche de Adoración" required>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="eventType" class="form-label">
+                   <i class="bi bi-tag me-2"></i>Tipo de Evento
+                 </label>
+                 <select class="form-select" id="eventType" required>
+                   <option value="">Seleccionar tipo...</option>
+                   <option value="Culto de Adoración">Culto de Adoración</option>
+                   <option value="Conferencia">Conferencia</option>
+                   <option value="Servicio Comunitario">Servicio Comunitario</option>
+                   <option value="Estudio Bíblico">Estudio Bíblico</option>
+                   <option value="Actividad Juvenil">Actividad Juvenil</option>
+                   <option value="Oración">Oración</option>
+                   <option value="Otro">Otro</option>
+                 </select>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="eventDate" class="form-label">
+                   <i class="bi bi-calendar me-2"></i>Fecha del Evento
+                 </label>
+                 <input type="date" class="form-control" id="eventDate" required>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="eventStatus" class="form-label">
+                   <i class="bi bi-flag me-2"></i>Estado
+                 </label>
+                 <select class="form-select" id="eventStatus" required>
+                   <option value="activo">Activo</option>
+                   <option value="cancelado">Cancelado</option>
+                   <option value="completado">Completado</option>
+                 </select>
+               </div>
+             </div>
+             
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="eventDescription" class="form-label">
+                   <i class="bi bi-text-paragraph me-2"></i>Descripción
+                 </label>
+                 <textarea class="form-control" id="eventDescription" rows="6" placeholder="Describe los detalles del evento..." required></textarea>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="eventColor" class="form-label">
+                   <i class="bi bi-palette me-2"></i>Color del Badge
+                 </label>
+                 <select class="form-select" id="eventColor">
+                   <option value="success">Verde (Cultos)</option>
+                   <option value="info">Azul (Conferencias)</option>
+                   <option value="warning">Amarillo (Servicios)</option>
+                   <option value="primary">Azul Oscuro (Estudios)</option>
+                   <option value="secondary">Gris (Otros)</option>
+                 </select>
+               </div>
+             </div>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <i class="bi bi-x-circle me-2"></i>Cancelar
+         </button>
+         <button type="submit" form="eventForm" class="btn btn-success">
+           <i class="bi bi-save me-2"></i>Guardar Evento
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+ <!-- Modal para Agregar Post-->
+ <div class="modal fade" id="quickPostModal" tabindex="-1" aria-labelledby="quickPostModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-primary text-white">
+         <h5 class="modal-title" id="quickPostModalLabel">
+           <i class="bi bi-plus-circle me-2"></i>Agregar Nuevo Post
+         </h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form id="quickPostForm">
+           <div class="row">
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="postTitle" class="form-label">
+                   <i class="bi bi-type me-2"></i>Título del Post
+                 </label>
+                 <input type="text" class="form-control" id="postTitle" placeholder="Ingresa el título..." required>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="postImage" class="form-label">
+                   <i class="bi bi-image me-2"></i>Imagen
+                 </label>
+                 <input type="file" class="form-control" id="postImage" accept="image/*" required>
+                 <div class="form-text">Formatos: JPG, PNG, GIF (Max: 5MB)</div>
+               </div>
+               
+               <div class="mb-3">
+                 <label for="postCategory" class="form-label">
+                   <i class="bi bi-tag me-2"></i>Categoría
+                 </label>
+                 <select class="form-select" id="postCategory" required>
+                   <option value="">Seleccionar categoría...</option>
+                   <option value="noticias">Noticias</option>
+                   <option value="eventos">Eventos</option>
+                   <option value="testimonios">Testimonios</option>
+                   <option value="predicaciones">Predicaciones</option>
+                   <option value="jovenes">Jóvenes</option>
+                 </select>
+               </div>
+             </div>
+             
+             <div class="col-md-6">
+               <div class="mb-3">
+                 <label for="postDescription" class="form-label">
+                   <i class="bi bi-text-paragraph me-2"></i>Descripción
+                 </label>
+                 <textarea class="form-control" id="postDescription" rows="8" placeholder="Escribe la descripción del post..." required></textarea>
+               </div>
+               
+               <div class="mb-3">
+                 <label class="form-label d-block">
+                   <i class="bi bi-calendar me-2"></i>Programación
+                 </label>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="publishType" id="publishNow" value="now" checked>
+                   <label class="form-check-label" for="publishNow">
+                     Publicar ahora
+                   </label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="publishType" id="publishLater" value="later">
+                   <label class="form-check-label" for="publishLater">
+                     Programar
+                   </label>
+                 </div>
+               </div>
+               
+               <div class="mb-3 d-none" id="scheduleContainer">
+                 <div class="row">
+                   <div class="col-md-6 mb-2">
+                     <label for="scheduleDate" class="form-label">
+                       <i class="bi bi-calendar-date me-2"></i>Fecha de publicación
+                     </label>
+                     <input type="date" class="form-control" id="scheduleDate">
+                   </div>
+                   <div class="col-md-6 mb-2">
+                     <label class="form-label">
+                       <i class="bi bi-clock me-2"></i>Hora de publicación
+                     </label>
+                     <div class="mb-2">
+                       <small class="text-info">
+                         <i class="bi bi-clock-fill me-1"></i>
+                         Hora actual: <span id="currentTime" class="fw-bold">--:--</span>
+                       </small>
+                     </div>
+                     <div class="row g-1">
+                       <div class="col-6">
+                         <select class="form-select" id="scheduleHour" disabled>
+                           <option value="">Hora</option>
+                         </select>
+                         <div class="form-text small">Hora</div>
+                       </div>
+                       <div class="col-6">
+                         <select class="form-select" id="scheduleMinute" disabled>
+                           <option value="">Min</option>
+                         </select>
+                         <div class="form-text small">Minutos</div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="form-text text-muted">
+                   <i class="bi bi-info-circle me-1"></i>
+                   Selecciona primero la fecha y luego la hora de publicación
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Vista previa de imagen -->
+           <div class="mt-3 d-none" id="imagePreview">
+             <label class="form-label">Vista Previa:</label>
+             <div class="text-center">
+               <img id="previewImg" src="" alt="Vista previa" class="img-thumbnail" style="max-height: 200px;">
+             </div>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <i class="bi bi-x-circle me-2"></i>Cancelar
+         </button>
+         <button type="submit" form="quickPostForm" class="btn btn-primary">
+           <i class="bi bi-check-circle me-2"></i>Crear Post
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
 
+ <!-- Modal para Ver Detalles del Mensaje -->
+ <div class="modal fade" id="messageDetailModal" tabindex="-1" aria-labelledby="messageDetailModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-primary text-white">
+         <h5 class="modal-title" id="messageDetailModalLabel">
+           <i class="bi bi-envelope-open me-2"></i>Detalles del Mensaje
+         </h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <div class="row">
+           <div class="col-md-6">
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-tag me-2"></i>Categoría
+               </label>
+               <div id="modalCategory" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-person me-2"></i>Nombre Completo
+               </label>
+               <div id="modalName" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-envelope me-2"></i>Correo Electrónico
+               </label>
+               <div id="modalEmail" class="form-control-plaintext"></div>
+             </div>
+           </div>
+           
+           <div class="col-md-6">
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-telephone me-2"></i>Teléfono
+               </label>
+               <div id="modalPhone" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-calendar me-2"></i>Fecha de Recepción
+               </label>
+               <div id="modalDate" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-flag me-2"></i>Estado
+               </label>
+               <div id="modalStatus">
+                 <select class="form-select" id="statusSelect">
+                   <option value="nuevo">Nuevo</option>
+                   <option value="leido">Leído</option>
+                   <option value="respondido">Respondido</option>
+                 </select>
+               </div>
+             </div>
+           </div>
+         </div>
+         
+         <div class="mb-3">
+           <label class="form-label fw-bold">
+             <i class="bi bi-chat-text me-2"></i>Mensaje
+           </label>
+           <div id="modalMessage" class="form-control-plaintext border rounded p-3 bg-light" style="min-height: 120px; white-space: pre-wrap;"></div>
+         </div>
+         
+         <!-- Notas del Administrador -->
+         <div class="mb-3">
+           <label for="adminNotes" class="form-label fw-bold">
+             <i class="bi bi-sticky me-2"></i>Notas del Administrador
+           </label>
+           <textarea class="form-control" id="adminNotes" rows="3" placeholder="Agregar notas internas..."></textarea>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <i class="bi bi-x-circle me-2"></i>Cerrar
+         </button>
+         <button type="button" class="btn btn-success" id="markAsRead">
+           <i class="bi bi-check-circle me-2"></i>Marcar como Leído
+         </button>
+         <button type="button" class="btn btn-primary" id="saveMessageChanges">
+           <i class="bi bi-save me-2"></i>Guardar Cambios
+         </button>
+         <button type="button" class="btn btn-danger" id="deleteMessageModal">
+           <i class="bi bi-trash me-2"></i>Eliminar
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal para Ver Detalles de Donación -->
+ <div class="modal fade" id="donationDetailModal" tabindex="-1" aria-labelledby="donationDetailModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-success text-white">
+         <h5 class="modal-title" id="donationDetailModalLabel">
+           <i class="bi bi-heart-fill me-2"></i>Detalles de la Donación
+         </h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <div class="row">
+           <div class="col-md-6">
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-tag me-2"></i>Categoría
+               </label>
+               <div id="donationModalCategory" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-person me-2"></i>Donante
+               </label>
+               <div id="donationModalDonor" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-telephone me-2"></i>Teléfono
+               </label>
+               <div id="donationModalPhone" class="form-control-plaintext"></div>
+             </div>
+
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-envelope me-2"></i>Correo Electrónico
+               </label>
+               <div id="donationModalEmail" class="form-control-plaintext"></div>
+             </div>
+           </div>
+           
+           <div class="col-md-6">
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-calendar me-2"></i>Fecha
+               </label>
+               <div id="donationModalDate" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-cash-coin me-2"></i>Monto
+               </label>
+               <div id="donationModalAmount" class="form-control-plaintext text-success fw-bold fs-5"></div>
+             </div>
+
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-credit-card me-2"></i>Método de Pago
+               </label>
+               <div id="donationModalMethod" class="form-control-plaintext"></div>
+             </div>
+             
+             <div class="mb-3">
+               <label class="form-label fw-bold">
+                 <i class="bi bi-flag me-2"></i>Estado
+               </label>
+               <div id="donationModalStatus">
+                 <select class="form-select" id="donationStatusSelect">
+                   <option value="Pendiente">Pendiente</option>
+                   <option value="Confirmado">Confirmado</option>
+                   <option value="Comprobante Enviado">Comprobante Enviado</option>
+                   <option value="Rechazado">Rechazado</option>
+                 </select>
+               </div>
+             </div>
+           </div>
+         </div>
+         
+         <div class="mb-3">
+           <label class="form-label fw-bold">
+             <i class="bi bi-chat-text me-2"></i>Comentario
+           </label>
+           <div id="donationModalComment" class="form-control-plaintext border rounded p-3 bg-light" style="min-height: 80px; white-space: pre-wrap;"></div>
+         </div>
+         
+         <!-- Notas del Administrador -->
+         <div class="mb-3">
+           <label for="donationAdminNotes" class="form-label fw-bold">
+             <i class="bi bi-sticky me-2"></i>Notas del Administrador
+           </label>
+           <textarea class="form-control" id="donationAdminNotes" rows="3" placeholder="Agregar notas internas sobre esta donación..."></textarea>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <i class="bi bi-x-circle me-2"></i>Cerrar
+         </button>
+         <div id="donationModalActions">
+           <!-- Los botones se agregan dinámicamente -->
+         </div>
+         <button type="button" class="btn btn-primary" id="saveDonationChanges">
+           <i class="bi bi-save me-2"></i>Guardar Cambios
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
+        <!--bootstrap js-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--custom js-->
+        <script src="js/main.js" type="module"></script>
+        <script src="js/posts.js" type="module"></script>
+        <script src="js/events.js" type="module"></script>
+        <script src="js/messages.js" type="module"></script>
+        <script src="js/donations.js" type="module"></script>
 </body>
-
 </html>

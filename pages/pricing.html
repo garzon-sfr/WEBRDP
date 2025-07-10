@@ -18,14 +18,14 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container px-5">
-                    <a class="navbar-brand fw-bold fs-3" href="../index.html">Rey de Paz</a>
+                    <a class="navbar-brand fw-bold" href="../index.html">Rey de Paz</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">Quienes somos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
                             <li class="nav-item"><a class="nav-link" href="events.html">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
                             <li class="nav-item"><a class="nav-link" href="pricing.html">Donaciones</a></li>
                             <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
 
@@ -44,158 +44,225 @@
             <section class="bg-light py-5">
                 <div class="container px-5 my-5">
                     <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Pay as you grow</h1>
-                        <p class="lead fw-normal text-muted mb-0">With our no hassle pricing plans</p>
+                        <h1 class="fw-bolder">Donaciones</h1>
+                        <p class="lead fw-normal text-muted mb-0">Apoya nuestra obra con tu ofrenda generosa</p>
+                        <p class="text-muted">Tu donación nos ayuda a continuar llevando la palabra de Dios a nuestra comunidad</p>
                     </div>
-                    <div class="row gx-5 justify-content-center">
-                        <!-- Pricing card free-->
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                    
+                    <!-- Primera fila: Bancolombia, Nequi, Da en persona -->
+                    <div class="row gx-4 justify-content-center mb-4">
+                        <!-- Bancolombia -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 text-center border-0 shadow">
+                                <div class="card-body p-4">
                                     <div class="mb-3">
-                                        <span class="display-4 fw-bold">$0</span>
-                                        <span class="text-muted">/ mo.</span>
+                                        <img src="assets/bancolombia.svg" alt="Bancolombia" style="height: 80px;" class="img-fluid">
                                     </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>1 users</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            5GB storage
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited public projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Community access
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Unlimited private projects
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Dedicated support
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Free linked domain
-                                        </li>
-                                        <li class="text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Monthly status reports
-                                        </li>
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                                    <p class="card-text text-muted mb-4">
+                                        Cuenta Ahorros<br>
+                                        <strong>123-456-789</strong><br>
+                                        Iglesia Rey de Paz<br>
+                                        NIT: 123456789-0
+                                    </p>
+                                    <button class="btn btn-primary btn-lg" onclick="mostrarFormulario('bancolombia')">
+                                        DONAR BANCOLOMBIA
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- Pricing card pro-->
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        Pro
-                                    </div>
+
+                        <!-- Nequi -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 text-center border-0 shadow">
+                                <div class="card-body p-4">
                                     <div class="mb-3">
-                                        <span class="display-4 fw-bold">$9</span>
-                                        <span class="text-muted">/ mo.</span>
+                                        <img src="assets/nequi-2.svg" alt="Nequi" style="height: 80px;" class="img-fluid">
                                     </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>5 users</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            5GB storage
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited public projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Community access
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited private projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Dedicated support
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Free linked domain
-                                        </li>
-                                        <li class="text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Monthly status reports
-                                        </li>
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                    <p class="card-text text-muted mb-4">
+                                        Realiza tu donación a través<br>
+                                        de este medio de forma<br>
+                                        rápida y segura desde<br>
+                                        tu celular
+                                    </p>
+                                    <button class="btn btn-success btn-lg" onclick="mostrarFormulario('nequi')">
+                                        DONAR NEQUI
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- Pricing card enterprise-->
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
+
+                        <!-- Da en persona -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 text-center border-0 shadow">
+                                <div class="card-body p-4">
                                     <div class="mb-3">
-                                        <span class="display-4 fw-bold">$49</span>
-                                        <span class="text-muted">/ mo.</span>
+                                        <i class="bi bi-envelope-open-fill" style="font-size: 5rem; color: #ff004c;"></i>
                                     </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>Unlimited users</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            5GB storage
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited public projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Community access
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited private projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Dedicated support
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>Unlimited</strong>
-                                            linked domains
-                                        </li>
-                                        <li class="text-muted">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Monthly status reports
-                                        </li>
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                                    <h4 class="card-title fw-bold text-info">Da en persona</h4>
+                                    <p class="card-text text-muted mb-4">
+                                        Puedes dar en persona en cualquiera de nuestras sedes durante la experiencia de culto del fin de semana.
+                                    </p>
+                                    <a class="btn btn-info btn-lg text-white" href="../index.html#ubicaciones">
+                                        VER UBICACIONES
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Versículo bíblico -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card bg-primary text-white border-0">
+                                <div class="card-body p-4 text-center">
+                                    <h5 class="card-title mb-3">
+                                        <i class="bi bi-heart-fill me-2"></i>"Cada uno dé como propuso en su corazón"
+                                    </h5>
+                                    <p class="card-text mb-3">
+                                        2 Corintios 9:7 - Tu ofrenda es una expresión de amor y gratitud hacia Dios
+                                    </p>
+                                    <small>Todas las donaciones son confidenciales y se destinan a la obra de Dios en nuestra comunidad</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- Formulario de donación -->
+            <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header" id="modalHeader">
+                            <h5 class="modal-title" id="donationModalLabel">
+                                <i class="bi bi-heart-fill me-2"></i>Formulario de Donación
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="bg-light rounded-3 py-4 px-4">
+                                <div class="text-center mb-4">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" id="donationIcon">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <h4 class="fw-bolder" id="donationTitle">Realizar Donación</h4>
+                                    <p class="lead fw-normal text-muted mb-0">Gracias por tu generosidad</p>
+                                </div>
+                                
+                                <form id="donationForm">
+                                    <!-- Categoría de donación -->
+                                    <div class="mb-3">
+                                        <label for="donationCategory" class="form-label">
+                                            <i class="bi bi-tag me-2"></i>Tipo de donación
+                                        </label>
+                                        <select class="form-select" id="donationCategory" required>
+                                            <option value="">Seleccionar tipo...</option>
+                                            <option value="diezmo">Diezmo</option>
+                                            <option value="ofrenda">Ofrenda</option>
+                                            <option value="misiones">Misiones</option>
+                                            <option value="protempo">Pro-tempo</option>
+                                            <option value="apoyo_social">Apoyo social</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Formulario dinámico que se muestra después de seleccionar categoría -->
+                                    <div id="dynamicDonationForm" class="d-none">
+                                        <!-- Nombre del donante -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="donorName" type="text" placeholder="Ingresa tu nombre..." required />
+                                            <label for="donorName">Nombre completo</label>
+                                            <div class="invalid-feedback">Nombre completo es requerido</div>
+                                        </div>
+                                        
+                                        <!-- Teléfono -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="donorPhone" type="tel" placeholder="+57 300 123 4567" required />
+                                            <label for="donorPhone">Número de teléfono</label>
+                                            <div class="invalid-feedback">Número de teléfono es requerido</div>
+                                        </div>
+                                        
+                                        <!-- Email opcional -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="donorEmail" type="email" placeholder="nombre@ejemplo.com" />
+                                            <label for="donorEmail">Correo electrónico (opcional)</label>
+                                            <div class="invalid-feedback">Correo electrónico no válido</div>
+                                        </div>
+                                        
+                                        <!-- Monto -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="donationAmount" type="number" min="1000" placeholder="50000" required />
+                                            <label for="donationAmount">Monto (COP)</label>
+                                            <div class="invalid-feedback">Monto mínimo $1,000 COP</div>
+                                        </div>
+                                        
+                                        <!-- Comentario -->
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="donationComment" placeholder="Comentario adicional..." style="height: 8rem"></textarea>
+                                            <label for="donationComment" id="commentLabel">Comentario (opcional)</label>
+                                        </div>
+                                        
+                                        <input type="hidden" id="donationMethod">
+                                        
+                                        <!-- Submit Button-->
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary btn-lg" id="submitDonation" type="submit">
+                                                <i class="bi bi-credit-card me-2"></i>Continuar al Pago
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Mensajes de éxito y error -->
+                                    <div class="d-none" id="submitDonationSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder text-success">¡Donación registrada correctamente!</div>
+                                            <p class="mb-0">Procede a realizar el pago con el código QR.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-none" id="submitDonationErrorMessage">
+                                        <div class="text-center text-danger mb-3">Error al procesar la donación. Por favor, intenta nuevamente.</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal QR de Pago -->
+            <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="qrModalLabel">
+                                <i class="bi bi-qr-code me-2"></i>Código QR para Pago
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="mb-4">
+                                <img id="qrImage" src="" alt="Código QR" class="img-fluid" style="max-width: 250px;">
+                            </div>
+                            <div id="paymentInfo">
+                                <h6 class="fw-bold">Información del Pago</h6>
+                                <p><strong>Donante:</strong> <span id="qrDonor"></span></p>
+                                <p><strong>Teléfono:</strong> <span id="qrPhone"></span></p>
+                                <p><strong>Tipo:</strong> <span id="qrCategory"></span></p>
+                                <p><strong>Monto:</strong> $<span id="qrAmount"></span> COP</p>
+                                <p><strong>Método:</strong> <span id="qrMethod"></span></p>
+                                <hr>
+                                <p class="text-muted small">Escanea el código QR con tu aplicación bancaria para completar la donación</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success" onclick="confirmarPago()">
+                                <i class="bi bi-check-circle me-2"></i>Confirmar Pago Realizado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
@@ -226,5 +293,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Donations JS-->
+        <script src="js/donaciones.js" type="module"></script>
     </body>
 </html>
