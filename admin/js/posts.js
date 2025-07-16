@@ -230,7 +230,7 @@ window.deletePost = async function(postId) {
         // 1. Eliminar archivo en VPS (si existe URL)
         if (post.imageUrl) {
             const filename = decodeURIComponent(post.imageUrl.split('/').pop());
-            await fetch("http://129.146.72.21:8000/delete.php", {
+            await fetch("https://storage.cjetechnology.org/delete.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ filename })
@@ -356,7 +356,7 @@ async function subirImagenAVPS(imageFile) {
     const formData = new FormData();
     formData.append("image", imageFile);
   
-    const response = await fetch("http://129.146.72.21:8000/upload.php", {
+    const response = await fetch("https://storage.cjetechnology.org/upload.php", {
       method: "POST",
       body: formData,
     });
