@@ -197,9 +197,11 @@ function handleImagePreview(event) {
     }
     
     if (file && file.type.startsWith('image/')) {
+
         // Validar tamaño de archivo (40MB máximo)
         if (file.size > 40 * 1024 * 1024) {
             showAlert('warning', 'El archivo debe ser menor a 40MB');
+
             event.target.value = '';
             previewContainer.classList.add('d-none');
             return;
