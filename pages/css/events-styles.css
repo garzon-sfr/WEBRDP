@@ -53,9 +53,9 @@
 .card-img-container {
     position: relative;
     overflow: hidden;
-    height: auto;
+    height: 200px;
     width: auto;
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #000000 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,12 +105,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(64, 93, 230, 0.85), rgba(220, 38, 127, 0.85));
+    background: linear-gradient(45deg, rgba(64, 93, 230, 0.85));
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     z-index: 2;
 }
 
@@ -135,12 +135,12 @@
     padding: 1.5rem !important;
     position: relative;
     z-index: 3;
-    background: white;
+    background: rgba(217, 221, 255, 0.575);
 }
 
 /* Badge de categoría estilo Instagram */
 .post-card .badge {
-    background: linear-gradient(45deg, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80) !important;
+    background: linear-gradient(45deg, #fd1d1d, #f56040, #f77737) !important;
     border: none;
     font-size: 0.7rem;
     font-weight: 600;
@@ -168,7 +168,7 @@
 
 /* Texto de descripción */
 .post-card .card-text {
-    color: #8e8e8e !important;
+    color: #242424 !important;
     line-height: 1.5;
     font-size: 0.9rem;
 }
@@ -667,7 +667,7 @@
 }
 
 /* ===== MODO OSCURO BÁSICO ===== */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     .post-card,
     .mobile-card {
         background: #1a1a1a;
@@ -689,7 +689,7 @@
     .mobile-card-text {
         color: #b3b3b3;
     }
-}
+}*/
 
 /* ===== EFECTO PARALLAX SUTIL ===== */
 .post-card:hover .card-img-top {
