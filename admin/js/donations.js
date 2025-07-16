@@ -176,13 +176,16 @@ function updateDonationsStatsByStatus() {
     const currentMonth = new Date().getMonth();
     const currentYear = new Date().getFullYear();
     
-    // Filtrar donaciones por estado - Confirmadas incluyen "Confirmado" y "Comprobante Enviado"
+    // Filtrar donaciones por estado
     const confirmedDonations = currentDonations.filter(d => 
-        d.estado?.toLowerCase() === 'confirmado' || 
+        d.estado?.toLowerCase() === 'confirmado'
+    );
+    const pendingDonations = currentDonations.filter(d => 
+        !d.estado || 
+        d.estado?.toLowerCase() === 'pendiente' ||
         d.estado?.toLowerCase() === 'comprobante enviado' ||
         d.estado?.toLowerCase() === 'comprobante_enviado'
     );
-    const pendingDonations = currentDonations.filter(d => !d.estado || d.estado?.toLowerCase() === 'pendiente');
     const rejectedDonations = currentDonations.filter(d => d.estado?.toLowerCase() === 'rechazado');
     
     // Calcular montos por estado
